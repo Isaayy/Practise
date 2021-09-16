@@ -1,16 +1,29 @@
 <template>
-  <main class="h-screen bg-veryDarkBlue flex justify-center items-center">
+  <main
+    class="md:h-screen bg-veryDarkBlue flex justify-center items-center p-20"
+  >
     <div
-      class="container max-w-screen-lg grid grid-cols-1 md:grid-cols-4 gap-10"
+      class="
+        container
+        max-w-screen-lg
+        grid grid-cols-1
+        md:grid-cols-4
+        gap-5
+        md:gap-10
+      "
     >
       <div class="row-span-2 flex flex-col">
         <div
           class="
             bg-blue
             rounded-2xl
-            flex flex-col
+            grid grid-cols-maxContent grid-rows-2
+            items-center
+            md:items-start
+            gap-x-7
+            md:flex md:flex-col
             p-12
-            pb-36
+            md:pb-36
             relative
             transform
             translate-y-3.5
@@ -19,10 +32,21 @@
         >
           <img
             src="/images/image-jeremy.png"
-            class="border-2 border-white rounded-full w-28 h-28"
+            class="border-2 border-white rounded-full w-28 h-28 row-span-2"
           />
-          <p class="text-gray-300 mt-12">Report for</p>
-          <p class="text-white text-7xl font-thin mt-2">Jeremy Robson</p>
+          <p class="text-gray-300 mt-12 self-end md:self-start">Report for</p>
+          <p
+            class="
+              self-start
+              text-white text-4xl
+              md:text-7xl
+              font-extralight
+              md:font-thin
+              mt-2
+            "
+          >
+            Jeremy Robson
+          </p>
         </div>
         <div
           class="
@@ -31,7 +55,8 @@
             relative
             rounded-2xl
             p-12
-            flex flex-col
+            flex
+            md:flex-col
             justify-between
           "
         >

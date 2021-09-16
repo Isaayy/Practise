@@ -20,23 +20,48 @@
     <div
       class="
         relative
-        pt-8
-        pb-12
+        py-8
+        md:pb-12
         px-12
         bg-darkBlue
         rounded-2xl
         hover:bg-blue
         cursor-pointer
+        md:flex
+        flex-col
+        grid grid-cols-2
+        gap-5
       "
     >
-      <div class="flex items-center justify-between">
-        <p class="text-3xl text-white font-medium text-transform">
+      <div class="flex items-center justify-between col-span-2">
+        <p
+          class="
+            text-2xl
+            md:text-3xl
+            text-white
+            font-normal
+            md:font-medium
+            text-transform
+          "
+        >
           {{ entry.label }}
         </p>
         <img src="images/icon-ellipsis.svg" alt="dots" class="cursor-pointer" />
       </div>
-      <p class="text-7xl text-white font-thin mt-12 mb-8">{{ entry.time }}</p>
-      <p class="text-gray-300">Last Week - {{ entry.lastWeekAmount }}</p>
+      <p
+        class="
+          text-4xl
+          md:text-7xl
+          text-white
+          font-extralight
+          md:font-thin md:mt-12 md:mb-8
+        "
+      >
+        {{ entry.time }}
+      </p>
+      <p class="text-gray-300 self-center justify-self-end md:self-start">
+        Last Week - {{ entry.lastWeekAmount }}
+      </p>
     </div>
   </div>
 </template>

@@ -10,6 +10,11 @@ module.exports = {
 
       blue: 'hsl(246, 80%, 60%)',
     }),
+    extend: {
+      gridTemplateColumns: {
+        maxContent: 'max-content 1fr',
+      },
+    },
   },
   variants: {
     extend: {},
