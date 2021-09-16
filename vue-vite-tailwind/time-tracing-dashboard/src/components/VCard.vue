@@ -1,27 +1,39 @@
 <template>
-  <div
-    class="
-      pt-8
-      pb-12
-      px-12
-      bg-darkBlue
-      rounded-2xl
-      hover:bg-blue
-      cursor-pointer
-    "
-  >
-    <div class="flex items-center justify-between">
-      <p class="text-3xl text-white font-medium text-transform">
-        {{ entry.label }}
-      </p>
-      <img
-        src="../assets/images/icon-ellipsis.svg"
-        alt="dots"
-        class="cursor-pointer"
-      />
+  <div v-if="entry">
+    <div
+      class="
+        rounded-t-2xl
+        max-h-20
+        overflow-hidden
+        text-center
+        pr-6
+        flex flex-col
+        items-end
+      "
+      :style="{ background: entry.color }"
+    >
+      <img class="transform -translate-y-3.5" :src="'images/' + entry.icon" />
     </div>
-    <p class="text-7xl text-white font-thin mt-12 mb-8">{{ entry.time }}</p>
-    <p class="text-gray-400">Last Week - {{ entry.lastWeekAmount }}</p>
+    <div
+      class="
+        pt-8
+        pb-12
+        px-12
+        bg-darkBlue
+        rounded-2xl
+        hover:bg-blue
+        cursor-pointer
+      "
+    >
+      <div class="flex items-center justify-between">
+        <p class="text-3xl text-white font-medium text-transform">
+          {{ entry.label }}
+        </p>
+        <img src="images/icon-ellipsis.svg" alt="dots" class="cursor-pointer" />
+      </div>
+      <p class="text-7xl text-white font-thin mt-12 mb-8">{{ entry.time }}</p>
+      <p class="text-gray-400">Last Week - {{ entry.lastWeekAmount }}</p>
+    </div>
   </div>
 </template>
 
