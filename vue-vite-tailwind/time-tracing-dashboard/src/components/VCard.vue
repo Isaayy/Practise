@@ -9,6 +9,9 @@
         pr-6
         flex flex-col
         items-end
+        relative
+        transform
+        translate-y-3.5
       "
       :style="{ background: entry.color }"
     >
@@ -16,6 +19,7 @@
     </div>
     <div
       class="
+        relative
         pt-8
         pb-12
         px-12
@@ -32,7 +36,7 @@
         <img src="images/icon-ellipsis.svg" alt="dots" class="cursor-pointer" />
       </div>
       <p class="text-7xl text-white font-thin mt-12 mb-8">{{ entry.time }}</p>
-      <p class="text-gray-400">Last Week - {{ entry.lastWeekAmount }}</p>
+      <p class="text-gray-300">Last Week - {{ entry.lastWeekAmount }}</p>
     </div>
   </div>
 </template>
@@ -42,9 +46,6 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
   props: { entry: Object },
-  setup() {
-    return {};
-  },
 });
 </script>
 
